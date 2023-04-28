@@ -1,0 +1,19 @@
+<div class="input-group mb-3">
+<input type="text" [(ngModel)]="searchBuffer" class="form-control">
+<button  (click)="addStock()" class="btn btn-primary">Add to dashboard</button>
+
+</div>
+  <h2>Custom Stocks</h2>
+
+  <div class="row ">
+  <div *ngFor="let stock of threeStocks" class="p-2 col-5 border border-1 mx-auto my-2">
+    <div><b>{{stock["0. symbol"]}}</b></div>
+    <p>Last refreshed: {{stock["6. refresh"]}}</p>
+    <div>Open: {{stock["1. open"]|prices}}</div>
+    <div>Close: {{stock["4. close"]|prices}}</div>
+    <div>Low: {{stock["3. low"]|prices}}</div>
+    <div>High: {{stock["2. high"]|prices}}</div>
+    <div>Volume: {{stock["5. volume"]}}</div>
+  </div>
+</div>
+

@@ -1,0 +1,8 @@
+<h2>Latest News</h2>
+
+  <div *ngFor="let article of listOfArticle, let x=index" class="article p-2 pb-3 m-3 border border-1">
+    <div><b>{{article["title"]}}</b></div>
+    <div>{{article["summary"]}}</div>
+    <div class="source">Source: {{article["source"]}}</div>
+</div>
+
